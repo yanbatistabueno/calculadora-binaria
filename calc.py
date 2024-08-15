@@ -1,3 +1,7 @@
+escolha_input = int(input("Escolha qual operação deseja fazer: 0 se quiser Decimal para Binário | 1 se quiser Binário para Decimal "))
+
+
+
 def invert_nums(nums_array):
     nums_returned = []
     for i in range(len(nums_array)):
@@ -42,8 +46,16 @@ def get_dec_by_bi(number):
 
          #Se quiser fazer com outras bases decimais, só trocar o 2 pela base decimal que deseja.
     return result
-    
 
-print(get_bi_by_dec(11)) #Mostra como seria o 11 na tabela binária. Ex : 1011 é o número binário que representa a 11
+if(escolha_input == 0):
+    numero_input = int(input("Digite o número decimal que deseja converter: "))
+    print(numero_input, "convertido em binário fica: ",get_bi_by_dec(numero_input))
+elif (escolha_input == 1):
+    numero_input = int(input("Digite o número binário que deseja converter: "))
+    print(numero_input, "convertido em decimal fica:", get_dec_by_bi(numero_input))
+else:
+    print("Escolha uma opção válida.")
 
-print(get_dec_by_bi(11)) #Mostra qual número na tabela binária é o 11. Ex : 11 é o número binário que corresponde a 3
+# print(get_bi_by_dec(11)) #Mostra como seria o 11 na tabela binária. Ex : 1011 é o número binário que representa a 11
+
+# print(get_dec_by_bi(11)) #Mostra qual número na tabela binária é o 11. Ex : 11 é o número binário que corresponde a 3
